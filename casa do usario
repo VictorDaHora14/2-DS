@@ -1,0 +1,17 @@
+Solicita as informações do usuário
+valor_casa = float(input("Informe o valor da casa a comprar: R$ "))
+salario = float(input("Informe o seu salário: R$ "))
+anos = int(input("Informe a quantidade de anos para pagar: "))
+
+# Calcula o número de meses e a prestação mensal
+meses = anos * 12
+prestacao_mensal = valor_casa / meses
+
+# Define o limite da prestação como 30% do salário
+limite_prestacao = 0.30 * salario
+
+# Verifica se a prestação é superior a 30% do salário
+if prestacao_mensal <= limite_prestacao:
+    print(f"Empréstimo aprovado! A prestação será de R$ {prestacao_mensal:.2f} por mês.")
+else:
+    print(f"Empréstimo negado. A prestação de R$ {prestacao_mensal:.2f} excede 30% do seu salário.")
